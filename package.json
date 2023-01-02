@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "parcel": "^2.8.2",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
     "process": "^0.11.10"
   }
 }
