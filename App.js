@@ -1,22 +1,70 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading1 = React.createElement(
-  "h1",
-  { id: "title2", key: "t2" },
-  "This is Heading 1 from the react CreateElement Tag"
+/*
+const header = React.createElement(
+  "div",
+  {
+    id: "container",
+    key: "container",
+  },
+  [
+    React.createElement(
+      "h1",
+      {
+        id: "h1Tag",
+        key: "h1",
+      },
+      "this is h1 tag from react"
+    ),
+    React.createElement(
+      "h2",
+      {
+        id: "h2Tag",
+        key: "h2",
+      },
+      "this is h2 tag from react"
+    ),
+    React.createElement(
+      "h3",
+      {
+        id: "h3Tag",
+        key: "h3",
+      },
+      "this is h3 tag from react"
+    ),
+  ]
 );
-const hed = () => {
-  return <div></div>;
+*/
+/*
+const headerJSX = (
+  <div title="headerJSX">
+    <h1 id="h1jsx">h1 tag from jsx</h1>
+    <h2 id="h2jsx">h2 tag from jsx</h2>
+    <h3 id="h2jsx">h3 tag from jsx</h3>
+  </div>
+);*/
+
+const HeaderElement = (
+  <div title="headerJSX">
+    <h1 id="h1jsx">h1 tag from Component</h1>
+    <h2 id="h2jsx">h2 tag from Component</h2>
+    <h3 id="h2jsx">h3 tag from Component</h3>
+  </div>
+);
+
+const HeaderComponent = () => {
+  return (
+    <div title="headerJSX">
+      {HeaderElement}
+      <h1 id="h1jsx">h1 tag from Component</h1>
+      <h2 id="h2jsx">h2 tag from Component</h2>
+      <h3 id="h2jsx">h3 tag from Component</h3>
+    </div>
+  );
 };
-
-const heading2 = React.createElement(
-  "h1",
-  { id: "title1", key: "t1" },
-  "This is Heading 2 from the react CreateElement Tag"
-);
-
-const container = React.createElement("div", {}, [heading1, heading2]);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(container);
+//root.render(header);
+//root.render(headerJSX);
+//root.render(<HeaderComponent />);
+root.render(<HeaderComponent />);
